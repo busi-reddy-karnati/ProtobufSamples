@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+//This is a service that has methods in it
+service SquareRootService{
+    '''
+    This creates a STUB that is used to interface. 
+    Stubs are essentially end points 
+    '''
+    //This is a method(squareRoot) that takes Number as input and gives out Result as output
+    rpc squareRoot(Number) returns (Result);
+}
+
+
+// This is for serialization of messages for effeicient transfer
+message Number{
+    int32 input = 1;
+}
+
+
+message Result{
+    int32 result = 1;
+}
