@@ -1,10 +1,8 @@
-from asyncio import futures
-from cgi import test
-import imp
+
 import grpc
 import test_pb2
 import test_pb2_grpc
-import concurrent.futures
+from concurrent import futures
 class SquareRootServiceServicer(test_pb2_grpc.SquareRootServiceServicer):
     def squareRoot(self, request, context):
         '''
